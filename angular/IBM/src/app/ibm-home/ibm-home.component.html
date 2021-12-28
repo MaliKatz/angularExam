@@ -1,0 +1,18 @@
+<div *ngIf="error">{{error}}</div>
+<div *ngIf="success">{{success}}</div>
+    
+<div id="theList">
+  <h2>The list</h2>
+  <ul><div *ngFor="let item of ibmDate | keyvalue| slice:0:20; let i=index">
+    date: {{item.key}} : open: {{item.value.open}}, high:{{item.value.open}}, low:{{item.value.low}}, close:{{item.value.close}}, difference:{{item.value.difference}} 
+    <ul>
+    </ul>
+  </div>
+  </ul>
+  <input type="submit" class="btn" value="{{btnSortHigh}}" (click)="sortByHighPrice()"> 
+  <br>
+  <span>היום הרווחי למכירה: {{ bestSellerDate }}</span> 
+   <br> 
+   <span>היום הרווחי לקניה: {{ bestShoppingDate }}</span> 
+   <br>
+</div>
